@@ -15,6 +15,7 @@ import StateAndProb from "./Components/StateAndProb";
 import HandlingTextInput from "./Components/HandlingTextInput";
 import HandlingTouches from "./Components/HandlingTouches";
 import TouchablesHandling from "./Components/TouchablesHandling";
+import ScrollAndListView from "./Components/ScrollAndListView";
 
 
 
@@ -35,7 +36,7 @@ export default class App extends Component<Props> {
 const AppStackNavigator = StackNavigator({
 
     Main: {
-        screen: TouchablesHandling
+        screen: ScrollAndListView
     }
 })
 
