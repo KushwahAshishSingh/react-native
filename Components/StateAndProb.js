@@ -4,7 +4,7 @@ import {
     StyleSheet,
     Text,
     TextInput,
-    View,AppRegistry
+    View,AppRegistry, Button
 } from 'react-native';
 
 
@@ -12,6 +12,9 @@ import {
 class UselessTextInput extends  Component{
 
 
+
+
+    // }
     // constructor() {
     //     super();
     //     this.state = {name: "Ashish"};
@@ -29,7 +32,6 @@ class UselessTextInput extends  Component{
     //         </Text>
     //
     //         );
-    // }
 
 
     render() {
@@ -50,10 +52,14 @@ class UselessTextInput extends  Component{
 export default class StateAndProb extends Component {
 
 
+
+
+
+
     constructor(props){
         super(props);
         this.state = {
-            text: 'red '
+            text: 'red'
         };
     }
     render(){
