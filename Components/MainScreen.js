@@ -4,16 +4,32 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     Text,
-    View
+    View, Button
 } from 'react-native';
 
 
 
 type Props = {};
 class MainScreen extends Component<Props> {
+
+    static  navigationOptions = {
+        title: 'welcome to Flex MainScreen'
+    }
+
+
     render() {
+
+        const {navigate} = this.props.navigation;
+
         return (
             <View style={styles.container}>
+
+
+                <Button title="go to State And Probs"
+                        onPress={() =>
+                            navigate('StateAndProb', {name: 'StateAndProb'})}/>
+
+
                 <View style={{flex: 1,justifyContent: 'flex-end',
                     alignItems: 'flex-end',
                 }}>
@@ -25,6 +41,7 @@ class MainScreen extends Component<Props> {
 
                 <View style={styles.bluebox}/>
                 <View style={styles.blackbox}/>
+
             </View>
         );
     }

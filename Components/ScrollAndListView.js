@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 
-import  {AppRegistry,FlatList,StyleSheet,SectionList, ScrollView, Image, View,Text} from 'react-native';
-
-
+import  {AppRegistry,FlatList,StyleSheet,SectionList, ScrollView, Image, View,Text, Button} from 'react-native';
 /*    Scroll View  */
 
 // export default  class ScrollAndListView extends Component{
@@ -69,9 +67,23 @@ import  {AppRegistry,FlatList,StyleSheet,SectionList, ScrollView, Image, View,Te
 /*     SECTION LIST  */
 
 export default class ScrollAndListView extends Component{
+
+    static navigationOptions = {
+        title: "Welcome to Scroll and List View",
+    };
+
+
     render(){
+
+
+        const { navigate } = this.props.navigation;
+
+
         return(
             <View style={styles.container}>
+                <Button title="go to FlexScreen"
+                        onPress={() => navigate('FlexScreen', {name: 'FlexScreen'})}/>
+
                 <SectionList
                     sections={[
                         {title: 'D', data:['Devin']},
@@ -81,6 +93,8 @@ export default class ScrollAndListView extends Component{
                     renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text> }
                     keyExtractor={(item, index) => index}
                 />
+
+
             </View>
         )
     }

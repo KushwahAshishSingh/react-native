@@ -16,8 +16,9 @@ import HandlingTextInput from "./Components/HandlingTextInput";
 import HandlingTouches from "./Components/HandlingTouches";
 import TouchablesHandling from "./Components/TouchablesHandling";
 import ScrollAndListView from "./Components/ScrollAndListView";
-
-
+import NetworkingExample from "./Components/NetworkingExample";
+import NavigationExample from "./Components/NavigationExample";
+import ButtonView from "./Components/ButtonView"
 
 
 type Props = {};
@@ -28,16 +29,23 @@ export default class App extends Component<Props> {
   render() {
     return (
 
-        <AppStackNavigator />
+         <AppStackNavigator />
     );
   }
 }
 
 const AppStackNavigator = StackNavigator({
 
-    Main: {
-        screen: ScrollAndListView
-    }
+         ButtonView: {screen: ButtonView},
+        // HandlingTouches: {screen: HandlingTouches},
+        // IMAGEVIEW: {screen: AbImage},
+        // NavigatioExample: { screen: NavigationExample},
+        // ScrollAndListView: { screen: ScrollAndListView },
+        // FlexScreen: { screen: SecondScreen},
+        // HandlingTextInputs: {screen: HandlingTextInput},
+        // MainScreen: {screen: MainScreen},
+        // StateAndProb: {screen: StateAndProb},
+
 })
 
 

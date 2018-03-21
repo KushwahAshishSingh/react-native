@@ -20,7 +20,7 @@ export  default class  FormExample extends Component{
     render(){
         return(
             <View onSubmit={this.handleSubmit}>
-                    Name:
+
                     <input type="text" value={this.state.value} onChange={this.handleChange} />
 
                 <input type="submit" value="submit"/>

@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     Text,
-    View
+    View,
+    Button
 } from 'react-native';
 
 
@@ -12,9 +13,23 @@ import {
 
 type Props = {};
 class SecondScreen extends Component<Props> {
+
+    static navigationOptions={
+        title: 'welcome to FlexScreen'
+    }
+
     render() {
+
+        const {navigate} = this.props.navigation;
+
         return (
             <View style={styles.parentView}>
+
+                <Button
+                    title="Go to handling text inputs"
+                    onPress={() =>
+                        navigate('HandlingTextInputs', { name: 'HandlingTextInputs'})}/>
+
 
                 <View style = {{flex:1, flexDirection:'row', justifyContent:'space-around'}}>
                     <View style={{height:'100%', width:'45%', backgroundColor:'blue', justifyContent:'flex-start'}}/>
@@ -44,8 +59,7 @@ class SecondScreen extends Component<Props> {
                  <View style={{flex:1, flexDirection: 'row',justifyContent: 'space-around'}}>
                     <View style={{height: '100%', width:'45%', backgroundColor:'green', justifyContent:'flex-start'}}/>
                      <View style={{height:'90%', width:'50%', backgroundColor: 'black', justifyContent:'flex-end'}}/>
-                </View>
-
+                 </View>
 
             </View>
         )
